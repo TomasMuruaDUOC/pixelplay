@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header,
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.categoria {
+  text-align: center;
+  margin: 20px;
+}
+
+.categoria img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+footer {
+  margin-top: 20px;
+}
