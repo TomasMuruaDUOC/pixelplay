@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro - PixelPlay</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Agregar Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Registro en PixelPlay</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Volver a Inicio</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container mt-4">
+      <form id="formRegistro" class="needs-validation" novalidate>
+        <div class="mb-3">
+          <label for="nombreCompleto" class="form-label">Nombre Completo</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nombreCompleto"
+            required
+          />
+          <div class="invalid-feedback">
+            Por favor ingrese su nombre completo.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="usuario" class="form-label">Nombre de Usuario</label>
+          <input type="text" class="form-control" id="usuario" required />
+          <div class="invalid-feedback">
+            Debe ingresar un nombre de usuario.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="correo" class="form-label">Correo Electrónico</label>
+          <input type="email" class="form-control" id="correo" required />
+          <div class="invalid-feedback">Ingrese un correo válido.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="clave" class="form-label">Contraseña</label>
+          <input type="password" class="form-control" id="clave" required />
+          <div class="invalid-feedback">
+            La contraseña debe tener al menos 6 caracteres y una mayúscula.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="repetirClave" class="form-label"
+            >Repetir Contraseña</label
+          >
+          <input
+            type="password"
+            class="form-control"
+            id="repetirClave"
+            required
+          />
+          <div class="invalid-feedback">Las contraseñas deben coincidir.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="fechaNacimiento" class="form-label"
+            >Fecha de Nacimiento</label
+          >
+          <input
+            type="date"
+            class="form-control"
+            id="fechaNacimiento"
+            required
+          />
+          <div class="invalid-feedback">Debes ser mayor de 13 años.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="direccion" class="form-label"
+            >Dirección de Despacho (Opcional)</label
+          >
+          <input type="text" class="form-control" id="direccion" />
+        </div>
+
+        <div class="d-flex gap-2">
+          <button type="submit" class="btn btn-primary">Registrar</button>
+          <button type="reset" class="btn btn-secondary">Limpiar</button>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 PixelPlay. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="validaciones.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
