@@ -6,12 +6,15 @@ body {
   padding: 0;
 }
 
-/* Cabecera y navegación */
+/* Estilo para el header */
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #1f2937;
   color: white;
-  padding: 20px 0;
-  text-align: center;
+  padding: 20px;
+  position: relative;
 }
 
 nav {
@@ -24,7 +27,7 @@ nav {
 nav ul {
   list-style-type: none;
   display: flex;
-  justify-content: center;
+  margin: 0;
   padding: 0;
 }
 
