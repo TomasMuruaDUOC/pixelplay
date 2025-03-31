@@ -1,7 +1,7 @@
 /* General */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
+  background-color: #121212;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -21,6 +21,16 @@ nav {
   padding: 10px 20px;
 }
 
+.navbar {
+  background-color: #202020;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: #fff;
+}
+
 nav ul {
   list-style-type: none;
   display: flex;
@@ -33,13 +43,14 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.8) !important;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #66e3ff;
+  color: #fff !important;
 }
 
 /* Contenedor del botón de registro */
@@ -66,30 +77,43 @@ nav ul li a:hover {
   transform: scale(1.05);
 }
 
+.btn-primary {
+  background: linear-gradient(135deg, #0070f3, #00a6ff);
+  border: none;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #0060d3, #0096ef);
+  transform: translateY(-1px);
+}
+
 /* Contenido principal */
 main {
-  max-width: 1800px; /* Aumentado de 1200px */
+  max-width: 1800px;
   margin: 20px auto;
   padding: 20px;
 }
 
+.hero-section {
+  padding: 6rem 0;
+}
+
 .categorias {
-  display: grid; /* Cambiado de flex a grid */
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(350px, 1fr)
-  ); /* Grid responsivo */
-  gap: 2rem; /* Espacio entre tarjetas */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
   padding: 2rem;
 }
 
 .categoria {
   border: 1px solid #ddd;
-  border-radius: 15px; /* Aumentado de 10px */
-  padding: 20px; /* Aumentado de 15px */
-  margin: 0; /* Eliminado el margen individual */
-  width: 100%; /* Ocupar todo el ancho disponible */
-  min-height: 300px; /* Altura mínima */
+  border-radius: 15px;
+  padding: 20px;
+  margin: 0;
+  width: 100%;
+  min-height: 300px;
   text-align: center;
   background-color: #ffffff;
   transition: transform 0.3s ease;
@@ -100,13 +124,13 @@ main {
 
 .categoria img {
   width: 100%;
-  height: 250px; /* Altura fija para las imágenes */
-  object-fit: cover; /* Mantener proporción de la imagen */
+  height: 250px;
+  object-fit: cover;
   border-radius: 10px;
 }
 
 .categoria p {
-  font-size: 1.5rem; /* Texto más grande */
+  font-size: 1.5rem;
   margin-top: 1rem;
   font-weight: bold;
   color: #333;
@@ -136,6 +160,36 @@ main {
   transition: all 0.3s ease;
 }
 
+.categoria-card {
+  transition: transform 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+.categoria-card:hover {
+  transform: translateY(-10px);
+}
+
+.categoria-img {
+  height: 300px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.card-img-overlay {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  border-radius: 1rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
 /* Detalle de juegos */
 .detalle-juego {
   display: flex;
@@ -154,6 +208,28 @@ main {
 .detalle-juego img {
   width: 50%;
   border-radius: 8px;
+}
+
+.featured-game {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.featured-game img {
+  height: 500px;
+  object-fit: cover;
+}
+
+.featured-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
 .descripcion {
@@ -236,11 +312,62 @@ main {
 
 /* Pie de página */
 footer {
+  background-color: #202020;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   text-align: center;
   padding: 20px;
-  background-color: #333;
   color: white;
   position: relative;
   bottom: 0;
   width: 100%;
+}
+
+/* Carrusel */
+.carousel-item {
+  transition: opacity 0.7s ease-in-out !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: block !important;
+  opacity: 0;
+  z-index: 1;
+}
+
+.carousel-item.active {
+  position: relative;
+  opacity: 1;
+  z-index: 2;
+}
+
+.carousel .featured-game {
+  position: relative;
+  height: 600px;
+}
+
+.carousel .featured-game img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.featured-overlay {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  padding: 2rem;
+}
+
+/* Carrusel: Usar fade nativo de Bootstrap */
+.carousel.slide.carousel-fade .carousel-item {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 1s;
+}
+
+.carousel.slide.carousel-fade .carousel-item.active {
+  opacity: 1;
 }
