@@ -4,6 +4,9 @@ body {
   font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
   margin: 0;
   padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Cabecera y navegación */
@@ -24,11 +27,29 @@ nav {
 .navbar {
   background-color: #202020;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar-brand {
   font-weight: 700;
   color: #fff;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-brand:hover {
+  opacity: 0.8;
+}
+
+.navbar-brand img {
+  background-color: transparent;
+  padding: 0;
+  border: none;
 }
 
 nav ul {
@@ -87,6 +108,127 @@ nav ul li a:hover {
 .btn-primary:hover {
   background: linear-gradient(135deg, #0060d3, #0096ef);
   transform: translateY(-1px);
+}
+
+.btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Estilo especial para el contenedor del formulario de registro */
+.registro-card {
+  background-color: rgba(
+    50,
+    50,
+    50,
+    0.85
+  ); /* Gris oscuro semitransparente para mejor contraste */
+  border: none;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+/* Estilos para inputs y etiquetas en la tarjeta de registro */
+.registro-card .form-control {
+  background-color: #3a3a3a !important; /* Fondo gris oscuro */
+  color: #ffffff !important; /* Texto blanco */
+  border: 1px solid #777 !important; /* Borde con buen contraste */
+}
+
+.registro-card .form-control::placeholder {
+  color: #ddd !important; /* Placeholder visible */
+}
+
+.registro-card .form-label {
+  color: #ffffff !important; /* Etiquetas en blanco */
+}
+
+.registro-card .invalid-feedback {
+  color: #ffcccb;
+}
+
+/* Estilos para el formulario de inicio de sesión */
+#formLogin .form-control {
+  background-color: #3a3a3a !important;
+  color: #ffffff !important;
+  border: 1px solid #777 !important;
+}
+
+#formLogin .form-control::placeholder {
+  color: #aaa !important;
+}
+
+#formLogin .form-label {
+  color: #ffffff !important;
+}
+
+#formLogin .btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Estilos para el formulario de recuperación de contraseña */
+#formRecuperar .form-control {
+  background-color: #3a3a3a !important;
+  color: #ffffff !important;
+  border: 1px solid #777 !important;
+}
+
+#formRecuperar .form-control::placeholder {
+  color: #aaa !important;
+}
+
+#formRecuperar .form-label {
+  color: #ffffff !important;
+}
+
+/* Estilos para el formulario de modificación */
+#formModificar .form-control {
+  background-color: #3a3a3a !important;
+  color: #ffffff !important;
+  border: 1px solid #777 !important;
+}
+
+#formModificar .form-control::placeholder {
+  color: #aaa !important;
+}
+
+#formModificar .form-label {
+  color: #ffffff !important;
+}
+
+#formModificar .form-check-label {
+  color: #ffffff;
+}
+
+#formModificar .btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.alert-info {
+  background-color: rgba(13, 202, 240, 0.1);
+  border-color: rgba(13, 202, 240, 0.2);
+  color: #0dcaf0;
+}
+
+/* Estilos mejorados para el formulario */
+.card-body {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.form-control:focus {
+  background-color: #4a4a4a !important;
+  border-color: #0070f3 !important;
+  box-shadow: 0 0 0 0.2rem rgba(0, 112, 243, 0.25) !important;
+}
+
+.btn {
+  min-width: 120px;
 }
 
 /* Contenido principal */
@@ -370,4 +512,39 @@ footer {
 
 .carousel.slide.carousel-fade .carousel-item.active {
   opacity: 1;
+}
+
+/* Card background dark */
+.card.bg-dark {
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  height: 100%;
+}
+
+.card-img-top {
+  height: 300px;
+  object-fit: cover;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-text {
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  min-height: 2rem;
+}
+
+.bi-gear-fill {
+  font-size: 1.2rem;
 }

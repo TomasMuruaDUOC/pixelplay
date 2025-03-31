@@ -1,4 +1,3 @@
-<!-- retro.html -->
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -7,58 +6,139 @@
     <title>Categoría Retro Games - PixelPlay</title>
     <link rel="stylesheet" href="styles.css" />
     <link
-      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
   </head>
-  <body>
-    <header>
-      <h1>PixelPlay - Retro Games</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">&larr; Volver a Inicio</a></li>
-        </ul>
-      </nav>
+  <body class="bg-dark">
+    <header class="navbar navbar-expand-lg navbar-dark py-3">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="/imagenes/logo.png"
+            alt="PixelPlay Logo"
+            style="height: 60px; background-color: transparent"
+          />
+          PixelPlay
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="accion.html">Acción</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aventura.html">Aventura</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="retro.html">Retro Games</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="estrategia.html">Estrategia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="deportes.html">Deportes</a>
+            </li>
+          </ul>
+          <div class="d-flex gap-2">
+            <a href="inicio_sesion.html" class="btn btn-primary"
+              >Iniciar Sesion</a
+            >
+            <a
+              href="modificar.html"
+              class="btn btn-outline-light"
+              title="Modificar Perfil"
+            >
+              <i class="bi bi-gear-fill"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </header>
 
-    <main>
-      <section class="descripcion-categoria">
-        <p>
+    <main class="container py-5">
+      <div class="text-white mb-5">
+        <h1 class="display-4 text-center mb-4">Juegos Retro</h1>
+        <p class="lead text-center text-white-50">
           Revive los clásicos juegos que marcaron generaciones, disfrutando de
           una jugabilidad sencilla pero adictiva que nunca pasa de moda.
         </p>
-      </section>
+      </div>
 
-      <section class="juegos-categoria">
+      <div class="row g-4">
         <!-- Pac-Man -->
-        <article class="detalle-juego">
-          <img src="imagenes/retro games/pacman.jpg" alt="Pac-Man" />
-          <div class="descripcion">
-            <h2>Pac-Man</h2>
-            <p>Revive el clásico arcade y escapa de los fantasmas.</p>
-            <p class="precio">CLP$ 10.000</p>
-            <button class="btn-carrito">Añadir al Carrito</button>
+        <div class="col-md-6">
+          <div
+            class="card bg-dark text-white border border-light border-opacity-25 h-100"
+          >
+            <img
+              src="imagenes/retro games/pacman.jpg"
+              class="card-img-top"
+              alt="Pac-Man"
+            />
+            <div class="card-body d-flex flex-column">
+              <h2 class="card-title">Pac-Man</h2>
+              <p class="card-text">
+                Revive el clásico arcade y escapa de los fantasmas mientras
+                recolectas todos los puntos en el laberinto.
+              </p>
+              <div
+                class="d-flex justify-content-between align-items-center mt-auto"
+              >
+                <span class="h4 mb-0 text-primary">CLP$ 10.000</span>
+                <button class="btn btn-primary">Añadir al Carrito</button>
+              </div>
+            </div>
           </div>
-        </article>
+        </div>
 
         <!-- Super Mario Bros -->
-        <article class="detalle-juego">
-          <img
-            src="imagenes/retro games/super mario bros.jpeg"
-            alt="Super Mario Bros"
-          />
-          <div class="descripcion">
-            <h2>Super Mario Bros</h2>
-            <p>Ayuda a Mario en su aventura clásica para salvar a Peach.</p>
-            <p class="precio">CLP$ 15.000</p>
-            <button class="btn-carrito">Añadir al Carrito</button>
+        <div class="col-md-6">
+          <div
+            class="card bg-dark text-white border border-light border-opacity-25 h-100"
+          >
+            <img
+              src="imagenes/retro games/super mario bros.jpeg"
+              class="card-img-top"
+              alt="Super Mario Bros"
+            />
+            <div class="card-body d-flex flex-column">
+              <h2 class="card-title">Super Mario Bros</h2>
+              <p class="card-text">
+                Ayuda a Mario en su aventura clásica para salvar a la Princesa
+                Peach atravesando 8 mundos llenos de desafíos.
+              </p>
+              <div
+                class="d-flex justify-content-between align-items-center mt-auto"
+              >
+                <span class="h4 mb-0 text-primary">CLP$ 15.000</span>
+                <button class="btn btn-primary">Añadir al Carrito</button>
+              </div>
+            </div>
           </div>
-        </article>
-      </section>
+        </div>
+      </div>
     </main>
 
-    <footer>
-      <p>&copy; 2025 PixelPlay. Todos los derechos reservados.</p>
+    <footer class="footer mt-auto py-4 bg-dark text-white">
+      <div class="container text-center">
+        <p class="mb-0">
+          &copy; 2025 PixelPlay. Todos los derechos reservados.
+        </p>
+      </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

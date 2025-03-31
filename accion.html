@@ -7,64 +7,142 @@
     <title>Categoría Acción - PixelPlay</title>
     <link rel="stylesheet" href="styles.css" />
     <link
-      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
   </head>
 
-  <body>
-    <header>
-      <h1>PixelPlay - Acción</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">&larr; Volver a Inicio</a></li>
-        </ul>
-      </nav>
+  <body class="bg-dark">
+    <header class="navbar navbar-expand-lg navbar-dark py-3">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="/imagenes/logo.png"
+            alt="PixelPlay Logo"
+            style="height: 60px; background-color: transparent"
+          />
+          PixelPlay
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="accion.html">Acción</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aventura.html">Aventura</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="retro.html">Retro Games</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="estrategia.html">Estrategia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="deportes.html">Deportes</a>
+            </li>
+          </ul>
+          <div class="d-flex gap-2">
+            <a href="inicio_sesion.html" class="btn btn-primary"
+              >Iniciar Sesion</a
+            >
+            <a
+              href="modificar.html"
+              class="btn btn-outline-light"
+              title="Modificar Perfil"
+            >
+              <i class="bi bi-gear-fill"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </header>
 
-    <section class="descripcion-categoria">
-      <p>
-        Los videojuegos de <strong>acción</strong> son juegos llenos de
-        adrenalina, que combinan velocidad, precisión y reflejos rápidos.
-        Disfruta de intensos combates y emocionantes historias en mundos
-        abiertos o escenarios futuristas.
-      </p>
-    </section>
+    <main class="container py-5">
+      <div class="text-white mb-5">
+        <h1 class="display-4 text-center mb-4">Juegos de Acción</h1>
+        <p class="lead text-center text-white-50">
+          Los videojuegos de <strong class="text-white">acción</strong> son
+          juegos llenos de adrenalina, que combinan velocidad, precisión y
+          reflejos rápidos. Disfruta de intensos combates y emocionantes
+          historias en mundos abiertos o escenarios futuristas.
+        </p>
+      </div>
 
-    <main>
-      <section class="juegos-categoria">
+      <div class="row g-4">
         <!-- Cyberpunk 2077 -->
-        <article class="detalle-juego">
-          <img src="imagenes/accion/cyberpunk.jpg" alt="Cyberpunk 2077" />
-          <div class="descripcion">
-            <h2>Cyberpunk 2077</h2>
-            <p>
-              Explora Night City, un mundo futurista lleno de acción, decisiones
-              críticas y una narrativa emocionante.
-            </p>
-            <p class="precio">CLP$ 45.000</p>
-            <button class="btn-carrito">Añadir al Carrito</button>
+        <div class="col-md-6">
+          <div
+            class="card bg-dark text-white border border-light border-opacity-25 h-100"
+          >
+            <img
+              src="imagenes/accion/cyberpunk.jpg"
+              class="card-img-top"
+              alt="Cyberpunk 2077"
+            />
+            <div class="card-body d-flex flex-column">
+              <h2 class="card-title">Cyberpunk 2077</h2>
+              <p class="card-text">
+                Explora Night City, un mundo futurista lleno de acción,
+                decisiones críticas y una narrativa emocionante.
+              </p>
+              <div
+                class="d-flex justify-content-between align-items-center mt-auto"
+              >
+                <span class="h4 mb-0 text-primary">CLP$ 45.000</span>
+                <button class="btn btn-primary">Añadir al Carrito</button>
+              </div>
+            </div>
           </div>
-        </article>
+        </div>
 
         <!-- GTA 6 -->
-        <article class="detalle-juego">
-          <img src="imagenes/accion/gta6.jpg" alt="GTA 6" />
-          <div class="descripcion">
-            <h2>Grand Theft Auto VI</h2>
-            <p>
-              Explora una increíble ciudad abierta con gráficos mejorados,
-              resolución 4K y desafíos sin límites.
-            </p>
-            <p class="precio">CLP$ 50.000</p>
-            <button class="btn-carrito">Añadir al Carrito</button>
+        <div class="col-md-6">
+          <div
+            class="card bg-dark text-white border border-light border-opacity-25 h-100"
+          >
+            <img
+              src="imagenes/accion/gta6.jpg"
+              class="card-img-top"
+              alt="GTA 6"
+            />
+            <div class="card-body d-flex flex-column">
+              <h2 class="card-title">Grand Theft Auto VI</h2>
+              <p class="card-text">
+                Explora una increíble ciudad abierta con gráficos mejorados,
+                resolución 4K y desafíos sin límites.
+              </p>
+              <div
+                class="d-flex justify-content-between align-items-center mt-auto"
+              >
+                <span class="h4 mb-0 text-primary">CLP$ 50.000</span>
+                <button class="btn btn-primary">Añadir al Carrito</button>
+              </div>
+            </div>
           </div>
-        </article>
-      </section>
+        </div>
+      </div>
     </main>
 
-    <footer>
-      <p>&copy; 2025 PixelPlay. Todos los derechos reservados.</p>
+    <footer class="footer mt-auto py-4 bg-dark text-white">
+      <div class="container text-center">
+        <p class="mb-0">
+          &copy; 2025 PixelPlay. Todos los derechos reservados.
+        </p>
+      </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
