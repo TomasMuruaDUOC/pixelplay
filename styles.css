@@ -20,6 +20,25 @@ header {
   position: relative;
 }
 
+/* Estilos para los íconos del header */
+.icon-link {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.icon-link:hover {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.icon-link i {
+  font-size: 1.4rem;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -59,7 +78,7 @@ nav {
 .navbar-brand img {
   background-color: transparent;
   padding: 0;
-  border: none;
+  border: no ne;
 }
 
 nav ul {
